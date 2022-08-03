@@ -1,0 +1,12 @@
+.container {
+    margin-top: 50px;
+  }
+  .skip {
+    background-color: #f0ad4e;
+  }
+  .previous {
+    background-color: #f04eac;
+  }
+  .generate {
+    background-color: #0275d8;
+  }
