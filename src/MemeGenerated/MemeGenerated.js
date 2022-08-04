@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useClipboard } from "use-clipboard-copy";
-import styles from './styles.module.css';
-export const MemeGenerated = () => {
+
+export const MemeGenerated = ({dark}) => {
 
   const [copied,setCopied] = useState(false);
 
@@ -17,10 +17,14 @@ export const MemeGenerated = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <button onClick={() => history('/') } className={styles.home}>Back</button>
-      <button onClick={copyLink} className={styles.copy}>{copied ? 'Link Copied!' : 'Copy Link'}</button>
-      {url && <img src={url} alt="meme"/>}
+    <section className={dark ? "bg-dark" : "bg-light"}  style={{height:"100vh"}}>
+    <div className="p-4 container ">
+      <div className=' d-flex justify-content-center'>
+        <button onClick={() => history('/') } className={dark ? "btn btn-outline-warning col-lg-4 m-2" : "btn btn-warning col-lg-4 m-2"}>Back</button>
+        <button onClick={copyLink} className={dark ? "btn btn-outline-primary col-lg-4 m-2" : "btn btn-primary col-lg-4 m-2"}>{copied ? 'Link Copied!' : 'Copy Link'}</button>
+      </div>
+      <div>{url && <img src={url} alt="meme" className="img-fluid" />}</div>
     </div>
+    </section>
   );
 }

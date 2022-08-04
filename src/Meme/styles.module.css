@@ -1,12 +1,19 @@
-.container {
-    margin-top: 50px;
+  .contain img {
+    cursor: pointer;
   }
-  .skip {
-    background-color: #f0ad4e;
+ 
+ .contain img:hover{
+    transform: scale(1.2);
+    transition-duration: 0.3s;
   }
-  .previous {
-    background-color: #f04eac;
+
+  .contain h5 {
+    font-size: small;
+    text-align: center;
+    padding-top: 5%;
   }
-  .generate {
-    background-color: #0275d8;
+
+  .contain hr {
+    border-top: 5px solid;
   }
+  
